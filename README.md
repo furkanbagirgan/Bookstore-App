@@ -9,11 +9,10 @@ This bookstore application is an application that shows newly released software 
 - Axios
 
 ## Screens
-<img src="screens/screenRecording.gif" width="25%"><table><tr>
-<td><img src="screens/homePage.jpg"></td>
-<td><img src="screens/favoritesPage.jpg"></td>
-<td><img src="screens/detailPage.jpg"></td>
-</tr></table>
+<p><img src="screens/screenRecording.gif">
+<img src="screens/homePage.jpg">
+<img src="screens/favoritesPage.jpg">
+<img src="screens/detailPage.jpg"></p>
 
 ## Installation
 1.Clone Project
