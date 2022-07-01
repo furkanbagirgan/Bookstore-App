@@ -14,11 +14,23 @@ function Favorites({navigation}){
   }
 
   const renderItem=({item})=>{
-    return <BookItem book={item} onPress={()=>handlePress(item.isbn13,item.title)} isFavorite={true} onFavorite={()=>removeFavorite(item.isbn13)}/>;
+    return <BookItem book={item} onPress={()=>handlePress(item.isbn13)} isFavorite={true} onFavorite={()=>removeFavorite(item.isbn13)} isHomeItem={false}/>;
   }
 
-  const handlePress=(bookId,bookName)=>{
-    navigation.push("BookDetail",{bookId,bookName});
+  const ItemDivider = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: "100%",
+          backgroundColor: "#ededed",
+        }}
+      />
+    );
+  }
+
+  const handlePress=(bookId)=>{
+    navigation.push("BookDetail",{bookId});
   }
 
   const removeFavorite=(bookId)=>{
@@ -28,7 +40,7 @@ function Favorites({navigation}){
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Favorites</Text>
-      <FlatList keyExtractor={keyExtractor} data={favorites} renderItem={renderItem} />
+      <FlatList overScrollMode="never" keyExtractor={keyExtractor} data={favorites} renderItem={renderItem} ItemSeparatorComponent={ItemDivider} />
     </View>
   );
 };

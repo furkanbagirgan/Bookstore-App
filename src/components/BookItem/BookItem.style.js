@@ -8,8 +8,6 @@ const styles=StyleSheet.create({
     alignItems: "center",
     marginVertical: 5,
     paddingVertical: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ededed",
   },
   image:{
     width: "25%",
@@ -17,12 +15,12 @@ const styles=StyleSheet.create({
     resizeMode: "cover"
   },
   infoContainer:{
-    width: "65%",
+    width: "55%",
     flexDirection:"column",
     justifyContent: "space-between",
     alignItems: "flex-start",
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
   title:{
     color: "#000",
@@ -35,8 +33,24 @@ const styles=StyleSheet.create({
     fontWeight: "bold",
   },
   iconContainer:{
-    width:"10%",
-    alignSelf: "flex-start"
+    width:"20%",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "flex-end"
+  },
+  detailButton:{
+    width: 75,
+    height: 35,
+    borderRadius: 15,
+    backgroundColor: "#ccc",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop:20
+  },
+  detailTitle:{
+    color:"#fff",
+    marginRight: 5
   }
 });
 

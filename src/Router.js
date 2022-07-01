@@ -7,70 +7,54 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './pages/Home';
 import BookDetail from './pages/BookDetail';
 import Favorites from './pages/Favorites';
-import { View } from "react-native";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function Router() {
-
-  const HomeStack=()=>{
+  const Tabs=()=>{
     return (
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
-        <Stack.Screen name="BookDetail" component={BookDetail} options={({route}) => ({
-          title: route.params.bookName,
-          headerShadowVisible: false,
-          headerTitleAlign: "center",
-          headerTintColor: "#FFA040",
-        })}/>
-      </Stack.Navigator>
-    );
-  }
+      <Tab.Navigator 
+          screenOptions={({ route }) => ({
+            tabBarShowLabel: false,
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
 
-  const FavoriteStack=()=>{
-    return (
-      <Stack.Navigator>
-        <Stack.Screen name="Favorites" component={Favorites} options={{headerShown: false}}/>
-        <Stack.Screen name="BookDetail" component={BookDetail} options={({route}) => ({
-          title: route.params.bookName,
-          headerShadowVisible: false,
-          headerTitleAlign: "center",
-          headerTintColor: "#FFA040",
-        })}/>
-      </Stack.Navigator>
+              if (route.name === "HomeTab") {
+                iconName = focused
+                  ? "book-multiple"
+                  : "book-multiple-outline";
+              } else if (route.name === "FavoritesTab") {
+                iconName = focused ? "bookmark-multiple" : "bookmark-multiple-outline";
+              }
+
+              // You can return any component that you like here!
+              return <Icon name={iconName} size={size} color={color} />;
+            },
+            headerShown: false,
+            tabBarActiveTintColor: "#fff",
+            tabBarInactiveTintColor: "#fff",
+            tabBarActiveBackgroundColor: "#ba68c8",
+            tabBarInactiveBackgroundColor: "#ba68c8",
+          })}
+        >
+          <Tab.Screen name="HomeTab" component={Home} />
+          <Tab.Screen name="FavoritesTab" component={Favorites} />
+        </Tab.Navigator>
     );
   }
 
   return (
     <NavigationContainer>
-      <Tab.Navigator 
-        screenOptions={({ route }) => ({
-          tabBarShowLabel: false,
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-
-            if (route.name === "HomeTab") {
-              iconName = focused
-                ? "book-multiple"
-                : "book-multiple-outline";
-            } else if (route.name === "FavoritesTab") {
-              iconName = focused ? "heart-multiple" : "heart-multiple-outline";
-            }
-
-            // You can return any component that you like here!
-            return <Icon name={iconName} size={size} color={color} />;
-          },
-          headerShown: false,
-          tabBarActiveTintColor: "#fff",
-          tabBarInactiveTintColor: "#fff",
-          tabBarActiveBackgroundColor: "#ba68c8",
-          tabBarInactiveBackgroundColor: "#ba68c8",
-        })}
-      >
-        <Tab.Screen name="HomeTab" component={HomeStack} />
-        <Tab.Screen name="FavoritesTab" component={FavoriteStack} />
-      </Tab.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Tabs" component={Tabs} options={{headerShown:false}}/>
+        <Stack.Screen name="BookDetail" component={BookDetail} options={{
+          title: "Book Detail",
+          headerShadowVisible: false,
+          headerTitleAlign: "center",
+          headerTintColor: "#ba68c8",
+        }}/>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

@@ -19,11 +19,23 @@ function Home({navigation}){
 
   const renderItem=({item})=>{
     let isFavorite=favorites.find((book)=>book.isbn13===item.isbn13);
-    return <BookItem book={item} onPress={()=>handlePress(item.isbn13,item.title)} isFavorite={!!isFavorite} onFavorite={()=>addFavorite(item)}/>;
+    return <BookItem book={item} onPress={()=>handlePress(item.isbn13)} isFavorite={!!isFavorite} onFavorite={()=>addFavorite(item)} isHomeItem={true}/>;
   }
 
-  const handlePress=(bookId,bookName)=>{
-    navigation.push("BookDetail",{bookId,bookName});
+  const ItemDivider = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: "100%",
+          backgroundColor: "#ededed",
+        }}
+      />
+    );
+  }
+
+  const handlePress=(bookId)=>{
+    navigation.push("BookDetail",{bookId});
   }
 
   const addFavorite=(book)=>{
@@ -50,7 +62,7 @@ function Home({navigation}){
   return (
     <View style={styles.container}>
       <Text style={styles.title}>New Books</Text>
-      <FlatList keyExtractor={keyExtractor} data={data} renderItem={renderItem} />
+      <FlatList overScrollMode="never" keyExtractor={keyExtractor} data={data} renderItem={renderItem} ItemSeparatorComponent={ItemDivider} />
     </View>
   );
 };

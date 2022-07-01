@@ -4,9 +4,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import styles from "./BookItem.style";
 
-function BookItem({book, onPress, isFavorite, onFavorite}){
+function BookItem({book, onPress, isFavorite, onFavorite, isHomeItem}){
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
         <Image style={styles.image} source={{uri:book.image}}/>
         <View style={styles.infoContainer}>
@@ -14,10 +13,15 @@ function BookItem({book, onPress, isFavorite, onFavorite}){
           <Text style={styles.price}>{book.price}</Text>
         </View>
         <View style={styles.iconContainer}>
-          <Icon name={isFavorite ? "heart" : "heart-outline"} size={23} color={isFavorite ? "#ba68c8" : "#000"} onPress={onFavorite} />
+          <Icon name={isFavorite ? (isHomeItem ? "bookmark-check" : "bookmark-remove") : ("bookmark-outline")} size={28} color={isFavorite ? "#ba68c8" : "#000"} onPress={onFavorite} />
+          <TouchableWithoutFeedback onPress={onPress} >
+            <View style={styles.detailButton}>
+              <Text style={styles.detailTitle}>Detail</Text>
+              <Icon name="arrow-right-bold-circle" size={18} color="#fff" />
+            </View>
+          </TouchableWithoutFeedback>
         </View>
       </View>
-    </TouchableWithoutFeedback>
   );
 };
 
