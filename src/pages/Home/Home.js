@@ -2,6 +2,7 @@ import React from "react";
 import { ActivityIndicator, FlatList, View, Text } from "react-native";
 import Config from "react-native-config";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useSelector,useDispatch } from 'react-redux';
 
 import styles from "./Home.style";
 import useFetch from './../../hooks/useFetch';
@@ -9,17 +10,24 @@ import BookItem from './../../components/BookItem';
 
 function Home({navigation}){
   const {data,error,loading} = useFetch(`${Config.API_HOME_URL}`,"books");
+  const favorites=useSelector(state=>state.favorites);
+  const dispatch=useDispatch();
 
   const keyExtractor=(item)=>{
     return item.isbn13;
   }
 
   const renderItem=({item})=>{
-    return <BookItem book={item} onPress={()=>handlePress(item.isbn13,item.title)}/>;
+    let isFavorite=favorites.find((book)=>book.isbn13===item.isbn13);
+    return <BookItem book={item} onPress={()=>handlePress(item.isbn13,item.title)} isFavorite={!!isFavorite} onFavorite={()=>addFavorite(item)}/>;
   }
 
   const handlePress=(bookId,bookName)=>{
     navigation.push("BookDetail",{bookId,bookName});
+  }
+
+  const addFavorite=(book)=>{
+    dispatch({type: "Add_Favorite",payload:{newFavorite:book}});
   }
 
   if(error){
@@ -41,6 +49,7 @@ function Home({navigation}){
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>New Books</Text>
       <FlatList keyExtractor={keyExtractor} data={data} renderItem={renderItem} />
     </View>
   );

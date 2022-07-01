@@ -1,12 +1,14 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 import styles from "./BookDetail.style";
 
-function BookDetail(){
+function BookDetail({route}){
+  const {bookId,bookName}=route.params;
+
   return (
     <View style={styles.container}>
-      
+      <Text style={styles.title}>{bookId+bookName}</Text>
     </View>
   );
 };
