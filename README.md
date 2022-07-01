@@ -1,21 +1,14 @@
 # Book Store App
 This bookstore application is an application that shows newly released software and computer books. The user can add the books he likes to his favourites. If he wants, he can view the book details and reach the website where the book is sold and make a purchase.
 
-## Used technologies
-
-
 ## Introduction
-<table><tr>
-<td><img src="screens/screenRecording.gif"></td>
-<td>
-  Used Tech
+<img src="screens/screenRecording.gif" width="25%">
+Used technologies
 - React Native
 - Redux
 - React Native Navigation
 - React Native Vector Icons
 - Axios
-</td>
-</tr></table>
 
 ## Screens
 <table><tr>
