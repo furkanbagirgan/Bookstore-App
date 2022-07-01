@@ -3,9 +3,7 @@ This bookstore application is an application that shows newly released software 
 
 ## Introduction
 <img src="screens/screenRecording.gif" width="25%">
-> [![screenshot][1]][1]
-
-  [1]: screens/screenRecording.gif
+> [![screens/screenRecording.gif][1]][1] 
 
 ## Used technologies
 - React Native
