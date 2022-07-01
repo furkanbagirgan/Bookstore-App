@@ -11,7 +11,7 @@ This bookstore application is an application that shows newly released software 
 ## Installation
 1.Clone Project
 ```
-git clone [https://github.com/furkanbagirgan/GraduationProject-ReactBootcamp.git](https://github.com/furkanbagirgan/Bookstore-App.git)
+git clone [https://github.com/furkanbagirgan/Bookstore-App.git](https://github.com/furkanbagirgan/Bookstore-App.git)
 ```
 2.Install the Necessary Packages for Project
 ```
