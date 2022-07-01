@@ -23,8 +23,8 @@ npx react-native start & npx react-native run-android
 ```
 
 ## Screen Recording
-<kbd><img src="screens/screenRecording.gif" width="30%"></kbd>
+<img src="screens/screenRecording.gif" width="50%">
 
 ## Screens
-<kbd><img src="screens/homePage.png" width="30%"></kbd><kbd><img src="screens/favoritesPage.png" width="30%">
-</kbd><kbd><img src="screens/detailPage.png" width="30%"></kbd>
+<kbd><img src="screens/homePage.jpg" width="30%"></kbd><kbd><img src="screens/favoritesPage.jpg" width="30%">
+</kbd><kbd><img src="screens/detailPage.jpg" width="30%"></kbd>
