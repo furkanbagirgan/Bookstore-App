@@ -15,6 +15,9 @@ This bookstore application is an application that shows newly released software 
 <td><img src="screens/detailPage.jpg"></td>
 </tr></table>
 
+### Screen Recording
+<img src="screens/screenRecording.gif" width="25%">
+
 ## Installation
 1.Clone Project
 ```
