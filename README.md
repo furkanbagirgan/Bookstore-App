@@ -1,10 +1,6 @@
 # Book Store App
 This bookstore application is an application that shows newly released software and computer books. The user can add the books he likes to his favourites. If he wants, he can view the book details and reach the website where the book is sold and make a purchase.
 
-## Introduction
-<img src="screens/screenRecording.gif" width="25%">
-> [![screens/screenRecording.gif]]
-
 ## Used technologies
 - React Native
 - Redux
@@ -14,9 +10,12 @@ This bookstore application is an application that shows newly released software 
 
 ## Screens
 <table><tr>
-<td><img src="screens/homePage.jpg"></td>
-<td><img src="screens/favoritesPage.jpg"></td>
-<td><img src="screens/detailPage.jpg"></td>
+<td><img src="screens/screenRecording.gif" width="25%"></td>
+<td><img src="screens/homePage.jpg" width="25%"></td>
+</tr></table>
+<table><tr>
+<td><img src="screens/favoritesPage.jpg" width="25%"></td>
+<td><img src="screens/detailPage.jpg" width="25%"></td>
 </tr></table>
 
 ## Installation
