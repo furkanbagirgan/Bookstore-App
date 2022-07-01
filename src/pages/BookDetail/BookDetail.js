@@ -29,7 +29,7 @@ function BookDetail({route}){
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.container} bounces={false} overScrollMode="never">
+    <ScrollView contentContainerStyle={styles.container} bounces={false} scrollEnabled={true} overScrollMode="never">
       <View>
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{uri:data.image}}/>

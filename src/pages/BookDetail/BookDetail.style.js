@@ -21,10 +21,10 @@ const styles=StyleSheet.create({
     fontSize: 18
   },
   container:{
-    flex: 1,
     backgroundColor: "#fff",
     flexDirection: "column",
-    justifyContent: "space-between"
+    justifyContent:"space-between",
+    flexGrow: 1
   },
   imageContainer:{
     width:"100%",
@@ -66,11 +66,13 @@ const styles=StyleSheet.create({
     marginTop: 20,
   },
   bottomContainer:{
+    marginTop: 20,
     paddingBottom: 20,
     paddingHorizontal: 15,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    width: "100%",
   },
   priceContainer:{
     flexDirection: "column",
