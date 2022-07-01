@@ -10,8 +10,8 @@ This bookstore application is an application that shows newly released software 
 
 ## Screens
 <table><tr>
-<td><img src="screens/screenRecording.gif" width="25%"></td>
-<td><img src="screens/homePage.jpg" width="25%"></td>
+<td><img src="screens/screenRecording.gif"></td>
+<td><img src="screens/homePage.jpg"></td>
 </tr></table>
 <table><tr>
 <td><img src="screens/favoritesPage.jpg" width="25%"></td>
