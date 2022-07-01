@@ -8,11 +8,8 @@ This bookstore application is an application that shows newly released software 
 - React Native Vector Icons
 - Axios
 
-## Screen Recording
-<img src="screens/screenRecording.gif" width="30%">
-
 ## Screens
-<img src="screens/homePage.jpg" width="30%">   <img src="screens/favoritesPage.jpg" width="30%">   <img src="screens/detailPage.jpg" width="30%">
+<img src="screens/screenRecording.gif" width="25%"><img src="screens/homePage.jpg" width="25%"><img src="screens/favoritesPage.jpg" width="25%"><img src="screens/detailPage.jpg" width="25%">
 
 ## Installation
 1.Clone Project
