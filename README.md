@@ -9,7 +9,7 @@ This bookstore application is an application that shows newly released software 
 - Axios
 
 ## Screens
-<p><img src="screens/screenRecording.gif" width="100px">
+<p><img src="screens/screenRecording.gif" width="250px">
 <img src="screens/homePage.jpg" width="24%">
 <img src="screens/favoritesPage.jpg" width="24%">
 <img src="screens/detailPage.jpg" width="24%"></p>
