@@ -12,6 +12,8 @@ This bookstore application is an application that shows newly released software 
 <p><img src="screens/homePage.jpg" width="32%">
 <img src="screens/favoritesPage.jpg" width="32%">
 <img src="screens/detailPage.jpg" width="32%"></p>
+
+## Screen Recording
 <img src="screens/screenRecording.gif" width="56%">
 
 ## Installation
